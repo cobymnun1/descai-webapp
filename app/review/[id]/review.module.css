@@ -1,0 +1,330 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c4f7c 100%);
+  background-image: 
+    radial-gradient(ellipse at 15% 20%, rgba(96, 165, 250, 0.25) 0px, transparent 45%),
+    radial-gradient(ellipse at 85% 30%, rgba(59, 130, 246, 0.22) 0px, transparent 45%),
+    radial-gradient(ellipse at 30% 60%, rgba(147, 197, 253, 0.18) 0px, transparent 40%),
+    radial-gradient(ellipse at 75% 70%, rgba(96, 165, 250, 0.2) 0px, transparent 45%),
+    radial-gradient(ellipse at 50% 90%, rgba(59, 130, 246, 0.16) 0px, transparent 40%),
+    radial-gradient(ellipse at 10% 80%, rgba(147, 197, 253, 0.15) 0px, transparent 35%),
+    radial-gradient(ellipse at 90% 10%, rgba(96, 165, 250, 0.19) 0px, transparent 40%),
+    radial-gradient(at 50% 40%, rgba(15, 23, 42, 0.6) 0px, transparent 50%),
+    radial-gradient(at 70% 55%, rgba(23, 37, 84, 0.55) 0px, transparent 45%),
+    radial-gradient(at 25% 45%, rgba(30, 58, 138, 0.5) 0px, transparent 48%);
+  background-size: 250% 250%;
+  animation: meshGradient 50s ease infinite;
+  padding: 150px 20px 20px 20px;
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.backButton {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.backButton:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.metadata {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.metaItem {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #555;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reportCard {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.titleSection {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+}
+
+.paperId {
+  font-size: 15px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.paperId code {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+}
+
+.scoresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  background: #f8f9fa;
+}
+
+.scoreCard {
+  text-align: center;
+}
+
+.scoreLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.scoreCircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 6px solid;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.scoreValue {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.scorePercent {
+  font-size: 14px;
+  font-weight: 600;
+  color: #999;
+  margin-top: 2px;
+}
+
+.divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ddd, transparent);
+  margin: 0;
+}
+
+.reviewSection {
+  padding: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.reviewSection:last-of-type {
+  border-bottom: none;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 25px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  font-size: 28px;
+}
+
+.subsection {
+  margin-bottom: 25px;
+}
+
+.subsection:last-child {
+  margin-bottom: 0;
+}
+
+.subsection h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 13px;
+}
+
+.subsection p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin: 0;
+}
+
+.warning {
+  color: #d32f2f !important;
+  font-weight: 600 !important;
+}
+
+.success {
+  color: #388e3c !important;
+  font-weight: 600 !important;
+}
+
+.footer {
+  background: #f8f9fa;
+  padding: 30px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.footerText {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.loading,
+.error {
+  max-width: 600px;
+  margin: 100px auto;
+  background: white;
+  padding: 60px 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.loading p {
+  font-size: 18px;
+  color: #666;
+  margin: 20px 0 0 0;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error h2 {
+  font-size: 28px;
+  color: #d32f2f;
+  margin: 0 0 15px 0;
+}
+
+.error p {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 30px 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .titleSection {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .scoresGrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 20px;
+  }
+
+  .reviewSection {
+    padding: 30px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .subsection p {
+    font-size: 15px;
+  }
+
+  .scoreCircle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .scoreValue {
+    font-size: 26px;
+  }
+}
+
+/* Animated Mesh Gradient Background */
+@keyframes meshGradient {
+  0%, 100% {
+    background-position: 0% 50%, 100% 50%, 50% 0%, 100% 100%, 0% 100%, 50% 50%;
+  }
+  25% {
+    background-position: 25% 25%, 75% 25%, 25% 75%, 75% 75%, 50% 50%, 25% 75%;
+  }
+  50% {
+    background-position: 50% 0%, 50% 100%, 0% 50%, 100% 50%, 25% 25%, 75% 25%;
+  }
+  75% {
+    background-position: 75% 25%, 25% 75%, 75% 25%, 25% 75%, 75% 75%, 50% 50%;
+  }
+}
+
