@@ -421,7 +421,7 @@ export default function Home() {
               ))
             ) : (
               <div className={styles.noResults}>
-                No reviews found matching "{searchQuery}"
+                No reviews found matching &quot;{searchQuery}&quot;
               </div>
             )}
           </div>

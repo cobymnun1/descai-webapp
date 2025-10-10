@@ -373,7 +373,7 @@ export default function TestPage() {
 
         {dbReviews.length === 0 && !loadingDbReviews && (
           <p style={{ marginTop: '10px', fontSize: '14px', color: '#666' }}>
-            Click "Load Database Reviews" to see reviews from Supabase.
+            Click &quot;Load Database Reviews&quot; to see reviews from Supabase.
           </p>
         )}
       </div>

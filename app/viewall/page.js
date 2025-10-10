@@ -99,7 +99,7 @@ export default function ViewAllPage() {
             <div className={styles.emptyState}>
               {searchQuery ? (
                 <>
-                  <p>No reviews found matching "{searchQuery}"</p>
+                  <p>No reviews found matching &quot;{searchQuery}&quot;</p>
                   <button onClick={() => setSearchQuery('')} className={styles.clearSearchButton}>
                     Clear Search
                   </button>
