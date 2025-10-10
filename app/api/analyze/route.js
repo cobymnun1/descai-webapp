@@ -2,6 +2,7 @@ import { readFile } from 'fs/promises';
 import { join } from 'path';
 import OpenAI from 'openai';
 import { downloadFile, deleteFile } from '../lib/storage';
+import { pushReviewToDatabase } from '../lib/database';
 
 /**
  * Validate score value - must be numeric and between 0 and 1
@@ -150,58 +151,6 @@ function validateReviewData(parsedResult) {
   };
 }
 
-/**
- * Push review to database using the push-review API
- */
-async function pushReviewToDatabase(reviewFilename, reviewData) {
-  const result = {
-    success: false,
-    recordId: null,
-    error: null,
-    details: null
-  };
-
-  try {
-    // Get the base URL for internal API calls
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-    
-    const response = await fetch(`${baseUrl}/api/push-review`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ 
-        reviewFilename,
-        reviewData 
-      }),
-    });
-
-    const data = await response.json();
-
-    if (response.ok) {
-      result.success = true;
-      result.recordId = data.recordId;
-    } else {
-      result.error = data.error || 'Failed to push review';
-      result.details = {
-        message: data.message,
-        code: data.code,
-        hint: data.hint
-      };
-    }
-
-    return result;
-
-  } catch (error) {
-    result.error = error.message;
-    result.details = {
-      type: error.constructor.name
-    };
-    
-    console.error('Error calling push-review API:', error);
-    return result;
-  }
-}
 
 export async function POST(request) {
   try {
