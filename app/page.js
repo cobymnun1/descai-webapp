@@ -5,9 +5,11 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import styles from './page.module.css';
 import Navbar from './test/Navbar';
+import { useMiniApp } from './contexts/MiniAppContext';
 
 export default function Home() {
   const router = useRouter();
+  const { isSDKLoaded, context } = useMiniApp();
   
   // Left chunk state
   const [file, setFile] = useState(null);
@@ -221,6 +223,21 @@ export default function Home() {
   };
 
   const isProcessing = uploading || converting || analyzing;
+
+  // Show loading state while SDK initializes
+  if (!isSDKLoaded) {
+    return (
+      <>
+        <Navbar />
+        <div className={styles.container}>
+          <div className={styles.loadingContainer}>
+            <div className={styles.spinner}></div>
+            <p>Loading DeScAi...</p>
+          </div>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>

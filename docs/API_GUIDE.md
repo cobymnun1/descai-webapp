@@ -8,6 +8,7 @@ Complete documentation for all DeScAi API endpoints.
 - [Analyze API](#post-apianalyze)
 - [Push Review API](#apipush-review)
 - [Reviews API](#apireviews)
+- [Webhook API](#post-apiwebhook) (Base Mini App)
 - [Error Handling](#error-handling)
 - [Environment Variables](#environment-variables)
 
@@ -482,6 +483,73 @@ Get a single review with full details.
 #### Notes
 - Automatically parses JSONB fields from string to JSON
 - Returns complete review data including all nested objects
+
+---
+
+## POST `/api/webhook`
+
+Handle Base mini app events and webhooks (feature/base-miniapp branch only).
+
+### Request
+
+**Method**: `POST`  
+**Content-Type**: `application/json`
+
+**Body**:
+```json
+{
+  "event": "user_action",
+  "userId": "12345",
+  "data": {
+    // Event-specific data
+  }
+}
+```
+
+### Response
+
+**Success (200)**:
+```json
+{
+  "success": true
+}
+```
+
+**Error (500)**:
+```json
+{
+  "error": "Webhook processing failed"
+}
+```
+
+### Example Usage
+
+```javascript
+// Base mini app will automatically call this webhook
+// when events occur (user actions, notifications, etc.)
+
+// Manual testing:
+const handleTestWebhook = async () => {
+  const response = await fetch('/api/webhook', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      event: 'test',
+      timestamp: Date.now()
+    }),
+  });
+  
+  const result = await response.json();
+  console.log('Webhook response:', result);
+};
+```
+
+### Notes
+- Only available in `feature/base-miniapp` branch
+- Receives events from Base/Farcaster platform
+- Currently logs events for debugging
+- Can be extended for notifications, user tracking, etc.
+- Webhook URL must be configured in manifest: `public/.well-known/farcaster.json`
 
 ---
 

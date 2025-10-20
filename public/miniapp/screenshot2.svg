@@ -1,0 +1,44 @@
+<svg width="1170" height="2532" viewBox="0 0 1170 2532" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1170" height="2532" fill="url(#bg2)"/>
+  
+  <!-- Header with gradient -->
+  <rect width="1170" height="300" fill="url(#headerGrad)"/>
+  <text x="585" y="150" font-family="Arial, sans-serif" font-size="44" font-weight="bold" fill="white" text-anchor="middle">Research Paper Review</text>
+  <text x="585" y="220" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" opacity="0.9">Generated October 20, 2025</text>
+  
+  <!-- Score Cards -->
+  <rect x="85" y="400" width="480" height="180" rx="16" fill="white" stroke="#dee2e6" stroke-width="2"/>
+  <text x="325" y="460" font-family="Arial, sans-serif" font-size="28" fill="#495057" text-anchor="middle">Originality</text>
+  <text x="325" y="540" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#667eea" text-anchor="middle">0.85</text>
+  
+  <rect x="605" y="400" width="480" height="180" rx="16" fill="white" stroke="#dee2e6" stroke-width="2"/>
+  <text x="845" y="460" font-family="Arial, sans-serif" font-size="28" fill="#495057" text-anchor="middle">Clarity</text>
+  <text x="845" y="540" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#28a745" text-anchor="middle">0.92</text>
+  
+  <rect x="85" y="620" width="480" height="180" rx="16" fill="white" stroke="#dee2e6" stroke-width="2"/>
+  <text x="325" y="680" font-family="Arial, sans-serif" font-size="28" fill="#495057" text-anchor="middle">Rigor</text>
+  <text x="325" y="760" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#17a2b8" text-anchor="middle">0.78</text>
+  
+  <rect x="605" y="620" width="480" height="180" rx="16" fill="white" stroke="#dee2e6" stroke-width="2"/>
+  <text x="845" y="680" font-family="Arial, sans-serif" font-size="28" fill="#495057" text-anchor="middle">Reproducibility</text>
+  <text x="845" y="760" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#ffc107" text-anchor="middle">0.65</text>
+  
+  <!-- Review Section -->
+  <rect x="85" y="870" width="1000" height="400" rx="16" fill="white" stroke="#dee2e6" stroke-width="2"/>
+  <text x="115" y="940" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#212529" text-anchor="start">Detailed Analysis</text>
+  <text x="115" y="1010" font-family="Arial, sans-serif" font-size="28" fill="#495057" text-anchor="start">This paper presents a novel approach to...</text>
+  <text x="115" y="1060" font-family="Arial, sans-serif" font-size="28" fill="#495057" text-anchor="start">The methodology is sound and well-</text>
+  <text x="115" y="1110" font-family="Arial, sans-serif" font-size="28" fill="#495057" text-anchor="start">documented. The results demonstrate...</text>
+  <text x="115" y="1160" font-family="Arial, sans-serif" font-size="28" fill="#495057" text-anchor="start">significant improvement over baseline...</text>
+</svg>
+

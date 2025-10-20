@@ -6,6 +6,8 @@ A Next.js-based web application for uploading, analyzing, and managing research 
 
 DeScAi is a comprehensive document analysis platform that automatically generates structured peer reviews of research papers. The system processes various document formats, performs AI-powered analysis across multiple dimensions (originality, clarity, rigor, reproducibility, data transparency, and interpretation), and stores results in a Supabase database for easy access and management.
 
+**Now available as a Base Mini App!** The `feature/base-miniapp` branch includes full integration with Farcaster's Base platform, allowing users to access DeScAi directly through the Base ecosystem.
+
 ## ✨ Key Features
 
 ### 🔄 Document Processing Pipeline
@@ -38,6 +40,12 @@ DeScAi is a comprehensive document analysis platform that automatically generate
 - **Database Testing**: Verify Supabase connection independently
 - **Error Recovery**: Retry failed automatic pushes
 - **Batch Migration**: Push multiple existing reviews to database
+
+### 📱 Base Mini App Integration (feature/base-miniapp)
+- **Farcaster SDK**: Full integration with Base ecosystem
+- **Cross-Platform**: Works as both web app and mini app
+- **Context Detection**: Automatically adapts to environment
+- **Webhook Support**: Real-time event handling from Base
 
 ## 🏗️ Architecture
 
@@ -138,8 +146,12 @@ descai/
 │   │   │   ├── route.js      # List all reviews
 │   │   │   └── [id]/
 │   │   │       └── route.js  # Get single review
-│   │   └── upload/           # File upload
-│   │       └── route.js      # Multipart form handling
+│   │   ├── upload/           # File upload
+│   │   │   └── route.js      # Multipart form handling
+│   │   └── webhook/          # Base mini app events (feature/base-miniapp)
+│   │       └── route.js      # Webhook handler
+│   ├── contexts/             # React contexts (feature/base-miniapp)
+│   │   └── MiniAppContext.js # Farcaster SDK provider
 │   ├── review/
 │   │   └── [id]/
 │   │       ├── page.js       # Review report page
@@ -148,9 +160,20 @@ descai/
 │   ├── layout.js             # Root layout
 │   └── globals.css           # Global styles
 ├── public/
+│   ├── .well-known/          # Mini app manifest (feature/base-miniapp)
+│   │   └── farcaster.json    # Base app configuration
+│   ├── miniapp/              # Mini app assets (feature/base-miniapp)
+│   │   ├── icon.svg          # App icon
+│   │   ├── splash.svg        # Splash screen
+│   │   ├── hero.svg          # OG/hero image
+│   │   └── screenshot*.svg   # App screenshots
 │   ├── uploads/              # Source text files
 │   └── reviews/              # Generated review JSONs
 ├── docs/                     # Documentation
+│   ├── README.md
+│   ├── API_GUIDE.md
+│   ├── DATABASE_GUIDE.md
+│   └── MINIAPP_GUIDE.md      # Mini app setup (feature/base-miniapp)
 ├── package.json
 └── next.config.mjs
 ```
@@ -269,7 +292,7 @@ Additional metrics:
 
 - [API_GUIDE.md](./API_GUIDE.md) - Complete API reference
 - [DATABASE_GUIDE.md](./DATABASE_GUIDE.md) - Database setup & troubleshooting
-- [ARCHITECTURE_DIAGRAM.md](./ARCHITECTURE_DIAGRAM.md) - System architecture details
+- [MINIAPP_GUIDE.md](./MINIAPP_GUIDE.md) - Base mini app integration guide (feature/base-miniapp)
 
 ## 🛠️ Tech Stack
 
@@ -280,6 +303,7 @@ Additional metrics:
 - **Database**: Supabase (PostgreSQL)
 - **Document Processing**: pdf-parse, mammoth
 - **Styling**: CSS Modules
+- **Mini App SDK**: @farcaster/miniapp-sdk v0.2.1 (feature/base-miniapp)
 
 ## 🔒 Security
 
@@ -323,4 +347,5 @@ DeScAi Development Team
 **Last Updated**: October 2025
 
 For detailed API documentation, see [API_GUIDE.md](./API_GUIDE.md)  
-For database setup, see [DATABASE_GUIDE.md](./DATABASE_GUIDE.md)
+For database setup, see [DATABASE_GUIDE.md](./DATABASE_GUIDE.md)  
+For Base mini app setup, see [MINIAPP_GUIDE.md](./MINIAPP_GUIDE.md)
