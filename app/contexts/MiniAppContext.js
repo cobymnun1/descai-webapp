@@ -11,12 +11,12 @@ export function MiniAppProvider({ children }) {
 
   useEffect(() => {
     const load = async () => {
+      // Signal ready IMMEDIATELY - don't wait for context
+      sdk.actions.ready();
+      
       try {
         const ctx = await sdk.context;
         setContext(ctx);
-        
-        // Signal ready to Base
-        sdk.actions.ready();
         setIsSDKLoaded(true);
       } catch (error) {
         console.log('Running in web mode (not mini app):', error);
