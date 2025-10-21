@@ -1,9 +1,9 @@
 export async function GET() {
   const manifest = {
     "accountAssociation": {
-      "header": "",
-      "payload": "",
-      "signature": ""
+      "header": "eyJmaWQiOjEzOTUyNTgsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHg0MzBENmVjODMzMDVkQTI2M2MyRjU2ZTlFRDBkOTBFYzdiMjVlQWE5In0",
+      "payload": "eyJkb21haW4iOiJkZXNjYWktd2ViYXBwLXh6c3QtZ2l0LWZlYXR1cmUtYi02ZWZkZmQtY29ieXMtcHJvamVjdHMtMzEzN2FmNWUudmVyY2VsLmFwcCJ9",
+      "signature": "bvVIpCpjArk1hOAlUMAxccJxln6b/fId7suBfvoqsNoPKPzeFfYj3/q8cCLtc0kRBsakY7qT7FeXckaqqSrXjRs="
     },
     "miniapp": {
       "version": "1",
@@ -24,7 +24,7 @@ export async function GET() {
       "tags": ["research", "ai", "peer-review", "education", "science"],
       "heroImageUrl": "https://descai-webapp-xzst-git-feature-b-6efdfd-cobys-projects-3137af5e.vercel.app/miniapp/hero.svg",
       "tagline": "Review papers instantly",
-      "ogTitle": "DeScAi - AI Research Paper Reviewer",
+      "ogTitle": "AI Research Reviewer",
       "ogDescription": "Generate comprehensive peer reviews of research papers using AI.",
       "ogImageUrl": "https://descai-webapp-xzst-git-feature-b-6efdfd-cobys-projects-3137af5e.vercel.app/miniapp/hero.svg",
       "noindex": true
