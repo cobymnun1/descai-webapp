@@ -1,30 +1,35 @@
 {
-  "baseBuilder": {
-    "ownerAddress": "0x785fAA8D709D7CaAD63d5FbDB750D4a22600d30d"
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
   },
   "miniapp": {
     "version": "1",
     "name": "DeScAi",
-    "homeUrl": "https://descai-webapp-xzst.vercel.app",
-    "iconUrl": "https://descai-webapp-xzst.vercel.app/miniapp/icon.svg",
-    "splashImageUrl": "https://descai-webapp-xzst.vercel.app/miniapp/splash.svg",
+    "homeUrl": "https://descai-webapp-xzst-git-feature-b-6efdfd-cobys-projects-3137af5e.vercel.app",
+    "iconUrl": "https://descai-webapp-xzst-git-feature-b-6efdfd-cobys-projects-3137af5e.vercel.app/miniapp/icon.svg",
+    "splashImageUrl": "https://descai-webapp-xzst-git-feature-b-6efdfd-cobys-projects-3137af5e.vercel.app/miniapp/splash.svg",
     "splashBackgroundColor": "#1a1a2e",
-    "webhookUrl": "https://descai-webapp-xzst.vercel.app/api/webhook",
+    "webhookUrl": "https://descai-webapp-xzst-git-feature-b-6efdfd-cobys-projects-3137af5e.vercel.app/api/webhook",
     "subtitle": "AI-powered research reviews",
     "description": "A fast, efficient tool for generating and managing AI-powered peer reviews of scientific research papers.",
     "screenshotUrls": [
-      "https://descai-webapp-xzst.vercel.app/miniapp/screenshot1.svg",
-      "https://descai-webapp-xzst.vercel.app/miniapp/screenshot2.svg",
-      "https://descai-webapp-xzst.vercel.app/miniapp/screenshot3.svg"
+      "https://descai-webapp-xzst-git-feature-b-6efdfd-cobys-projects-3137af5e.vercel.app/miniapp/screenshot1.svg",
+      "https://descai-webapp-xzst-git-feature-b-6efdfd-cobys-projects-3137af5e.vercel.app/miniapp/screenshot2.svg",
+      "https://descai-webapp-xzst-git-feature-b-6efdfd-cobys-projects-3137af5e.vercel.app/miniapp/screenshot3.svg"
     ],
     "primaryCategory": "education",
     "tags": ["research", "ai", "peer-review", "education", "science"],
-    "heroImageUrl": "https://descai-webapp-xzst.vercel.app/miniapp/hero.svg",
+    "heroImageUrl": "https://descai-webapp-xzst-git-feature-b-6efdfd-cobys-projects-3137af5e.vercel.app/miniapp/hero.svg",
     "tagline": "Review papers instantly",
     "ogTitle": "DeScAi - AI Research Paper Reviewer",
     "ogDescription": "Generate comprehensive peer reviews of research papers using AI.",
-    "ogImageUrl": "https://descai-webapp-xzst.vercel.app/miniapp/hero.svg",
+    "ogImageUrl": "https://descai-webapp-xzst-git-feature-b-6efdfd-cobys-projects-3137af5e.vercel.app/miniapp/hero.svg",
     "noindex": true
+  },
+  "baseBuilder": {
+    "ownerAddress": "0x785fAA8D709D7CaAD63d5FbDB750D4a22600d30d"
   }
 }
 
