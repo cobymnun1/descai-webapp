@@ -18,13 +18,13 @@ export const metadata = {
   other: {
     'fc:miniapp': JSON.stringify({
       version: "next",
-      imageUrl: "https://descai-webapp-xzst.vercel.app/miniapp/hero.svg",
+      imageUrl: "https://descai-webapp-xzst-git-feature-b-6efdfd-cobys-projects-3137af5e.vercel.app/miniapp/hero.svg",
       button: {
         title: "Analyze Papers",
         action: {
           type: "launch_miniapp",
           name: "DeScAi",
-          url: "https://descai-webapp-xzst.vercel.app"
+          url: "https://descai-webapp-xzst-git-feature-b-6efdfd-cobys-projects-3137af5e.vercel.app"
         }
       }
     })
