@@ -30,7 +30,7 @@ export async function GET() {
       "noindex": true
     },
     "baseBuilder": {
-      "ownerAddress": "0x785fAA8D709D7CaAD63d5FbDB750D4a22600d30d"
+      "allowedAddresses": ["0x785fAA8D709D7CaAD63d5FbDB750D4a22600d30d"]
     }
   };
 
